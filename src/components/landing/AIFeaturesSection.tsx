@@ -5,55 +5,81 @@ const features = [
   {
     icon: Sparkles,
     title: "Smart Matching",
-    description: "AI recommends the best student-program matches based on fit, eligibility, and preferences.",
-    color: "text-accent" as const,
-    bg: "bg-accent/15" as const,
+    description: "Our AI doesn't just filter — it understands. It reads your profile, compares thousands of program criteria, and recommends the ones where you'll thrive. No more scrolling through endless lists.",
+    color: "text-accent-foreground",
+    bg: "bg-accent/15",
+    mockBg: "from-accent/20 to-accent/5",
   },
   {
     icon: FileSearch,
-    title: "Document Parsing",
-    description: "Transcripts, essays, and certificates are automatically extracted, verified, and structured.",
-    color: "text-primary" as const,
-    bg: "bg-primary/10" as const,
+    title: "Document Intelligence",
+    description: "Upload your transcripts, essays, and certificates once. Our AI extracts, structures, and verifies everything — turning messy documents into clean, actionable data for institutions.",
+    color: "text-primary",
+    bg: "bg-primary/10",
+    mockBg: "from-primary/15 to-primary/5",
   },
   {
     icon: Activity,
     title: "Readiness Diagnostics",
-    description: "Students see exactly where they stand and what to improve before applying.",
-    color: "text-secondary" as const,
-    bg: "bg-secondary/15" as const,
+    description: "Before you hit submit, know exactly where you stand. Our readiness score shows your strengths, flags gaps, and tells you what to improve — like a GPS for your application journey.",
+    color: "text-secondary",
+    bg: "bg-secondary/15",
+    mockBg: "from-secondary/15 to-secondary/5",
   },
   {
     icon: AlertTriangle,
-    title: "Anomaly Detection",
-    description: "Flag inconsistencies, plagiarism, and integrity issues before they become problems.",
-    color: "text-primary" as const,
-    bg: "bg-primary/10" as const,
+    title: "Integrity Shield",
+    description: "Every application passes through anomaly detection, plagiarism checks, and document verification. Institutions get peace of mind; students get a fair process.",
+    color: "text-primary",
+    bg: "bg-primary/10",
+    mockBg: "from-primary/15 to-primary/5",
   },
 ];
 
 const AIFeaturesSection = () => (
-  <section id="ai-features" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/40">
-    <div className="max-w-6xl mx-auto">
-      <ScrollReveal>
-        <div className="text-center mb-14">
-          <span className="inline-flex items-center gap-1.5 bg-accent/20 text-accent-foreground text-sm font-medium rounded-full px-4 py-1 mb-4">
+  <section id="ai-features" className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/40">
+    <div className="max-w-5xl mx-auto">
+      <ScrollReveal variant="blur-in">
+        <div className="text-center mb-20">
+          <span className="inline-flex items-center gap-1.5 bg-accent/20 text-accent-foreground text-sm font-medium rounded-full px-5 py-1.5 mb-4">
             <Sparkles size={14} /> Powered by AI
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Intelligence at every step</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">From discovery to decision, AI works behind the scenes so you don't have to.</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">Intelligence at every step</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto text-lg">From discovery to decision, AI works behind the scenes so you don't have to.</p>
         </div>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="space-y-20">
         {features.map((f, i) => (
-          <ScrollReveal key={i} delay={i * 100}>
-            <div className="bg-card rounded-2xl border p-6 text-center shadow-sm hover:shadow-md transition-shadow h-full">
-              <div className={`w-12 h-12 rounded-xl ${f.bg} flex items-center justify-center mx-auto mb-4`}>
-                <f.icon className={f.color} size={24} />
+          <ScrollReveal key={i} delay={150} variant={i % 2 === 0 ? "fade-left" : "fade-right"}>
+            <div className={`flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10`}>
+              {/* Text side */}
+              <div className="flex-1">
+                <div className={`w-14 h-14 rounded-xl ${f.bg} flex items-center justify-center mb-5`}>
+                  <f.icon className={f.color} size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-3">{f.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-base">{f.description}</p>
               </div>
-              <h3 className="text-base font-semibold text-foreground mb-2">{f.title}</h3>
-              <p className="text-sm text-muted-foreground">{f.description}</p>
+
+              {/* Visual mock */}
+              <div className="flex-1 w-full">
+                <div className={`bg-gradient-to-br ${f.mockBg} rounded-2xl border p-8 h-48 sm:h-56 flex items-center justify-center`}>
+                  <div className="bg-card/80 backdrop-blur rounded-xl p-6 shadow-lg border w-full max-w-xs">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-8 h-8 rounded-lg ${f.bg} flex items-center justify-center`}>
+                        <f.icon className={f.color} size={16} />
+                      </div>
+                      <div className="w-24 h-2.5 bg-muted rounded-full" />
+                    </div>
+                    <div className="space-y-2">
+                      <div className="w-full h-2 bg-muted rounded-full" />
+                      <div className="w-4/5 h-2 bg-muted rounded-full" />
+                      <div className="w-3/5 h-2 bg-muted rounded-full" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         ))}

@@ -1,84 +1,60 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, ChevronDown } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const HeroSection = () => (
-  <section className="relative pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    {/* Animated floating background elements */}
     <div className="absolute inset-0 -z-10">
-      <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-      <div className="absolute top-40 right-1/3 w-48 h-48 bg-accent/15 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-[10%] w-72 h-72 bg-primary/8 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-secondary/8 rounded-full blur-3xl animate-float-slow" />
+      <div className="absolute top-1/3 right-[20%] w-48 h-48 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-1/3 left-[20%] w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: "4s" }} />
     </div>
 
     <div className="max-w-5xl mx-auto text-center">
-      <ScrollReveal>
-        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+      <ScrollReveal variant="blur-in">
+        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-5 py-2 text-sm font-medium mb-8">
           <Sparkles size={16} />
           AI-Powered Admissions Platform
         </div>
       </ScrollReveal>
 
-      <ScrollReveal delay={100}>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-          Apply once,{" "}
-          <span className="text-primary">go anywhere</span>
+      <ScrollReveal delay={200} variant="scale-up">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight">
+          One application.{" "}
+          <br className="hidden sm:block" />
+          <span className="text-primary">Infinite possibilities.</span>
         </h1>
       </ScrollReveal>
 
-      <ScrollReveal delay={200}>
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-          UniPaith connects students and institutions through one universal application — powered by AI to simplify admissions for everyone.
+      <ScrollReveal delay={400}>
+        <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          Imagine a world where applying to college feels less like a maze — and more like a conversation. That world is UniPaith.
         </p>
       </ScrollReveal>
 
-      <ScrollReveal delay={300}>
+      <ScrollReveal delay={600}>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="text-base px-8 py-6 rounded-xl shadow-lg" asChild>
+          <Button size="lg" className="text-base px-10 py-7 rounded-xl shadow-lg text-lg" asChild>
             <a href="#cta">
-              Create Free Account
-              <ArrowRight size={18} className="ml-1" />
+              Start Your Journey
+              <ArrowRight size={20} className="ml-2" />
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="text-base px-8 py-6 rounded-xl" asChild>
-            <a href="#cta">Request a Demo</a>
+          <Button size="lg" variant="outline" className="text-base px-10 py-7 rounded-xl text-lg" asChild>
+            <a href="#cta">See It In Action</a>
           </Button>
         </div>
       </ScrollReveal>
+    </div>
 
-      <ScrollReveal delay={400}>
-        <div className="relative mt-16 max-w-3xl mx-auto">
-          <div className="bg-card rounded-2xl shadow-2xl border p-6 sm:p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 rounded-full bg-secondary" />
-              <div className="w-3 h-3 rounded-full bg-accent" />
-              <div className="w-3 h-3 rounded-full bg-primary" />
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-muted rounded-lg p-4 h-24 flex flex-col justify-between">
-                <div className="w-8 h-2 bg-primary/30 rounded" />
-                <div className="space-y-1">
-                  <div className="w-full h-2 bg-primary/20 rounded" />
-                  <div className="w-2/3 h-2 bg-primary/15 rounded" />
-                </div>
-              </div>
-              <div className="bg-muted rounded-lg p-4 h-24 flex flex-col justify-between">
-                <div className="w-8 h-2 bg-secondary/30 rounded" />
-                <div className="space-y-1">
-                  <div className="w-full h-2 bg-secondary/20 rounded" />
-                  <div className="w-3/4 h-2 bg-secondary/15 rounded" />
-                </div>
-              </div>
-              <div className="bg-muted rounded-lg p-4 h-24 flex flex-col justify-between">
-                <div className="w-8 h-2 bg-accent/40 rounded" />
-                <div className="space-y-1">
-                  <div className="w-full h-2 bg-accent/30 rounded" />
-                  <div className="w-1/2 h-2 bg-accent/20 rounded" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ScrollReveal>
+    {/* Scroll indicator */}
+    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-gentle">
+      <a href="#problem" className="flex flex-col items-center gap-2 text-muted-foreground/60 hover:text-muted-foreground transition-colors">
+        <span className="text-xs font-medium tracking-widest uppercase">Scroll to explore</span>
+        <ChevronDown size={20} />
+      </a>
     </div>
   </section>
 );

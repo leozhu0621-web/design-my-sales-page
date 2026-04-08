@@ -1,49 +1,51 @@
-import { ClipboardList, Brain, ShieldCheck, BarChart3 } from "lucide-react";
+import { X, Check } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
-const features = [
-  {
-    icon: ClipboardList,
-    title: "Standardized Intake",
-    description: "Receive applications in a consistent, structured format — no more manual data wrangling.",
-  },
-  {
-    icon: Brain,
-    title: "AI-Powered Review Tools",
-    description: "Let AI surface the strongest candidates, flag anomalies, and score fit automatically.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Integrity & Compliance",
-    description: "Built-in document verification, plagiarism detection, and audit-ready workflows.",
-  },
-  {
-    icon: BarChart3,
-    title: "Data-Driven Insights",
-    description: "Understand applicant pipelines, conversion rates, and yield with real-time analytics.",
-  },
+const comparisons = [
+  { before: "Manually reviewing thousands of applications", after: "AI surfaces top candidates in seconds" },
+  { before: "Inconsistent formats from every applicant", after: "Standardized, structured intake for all" },
+  { before: "Compliance gaps and integrity risks", after: "Built-in verification and audit trails" },
+  { before: "Guessing at yield and conversion rates", after: "Real-time analytics and pipeline insights" },
 ];
 
 const InstitutionsSection = () => (
-  <section id="institutions" className="py-20 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-6xl mx-auto">
-      <ScrollReveal>
-        <div className="text-center mb-14">
-          <span className="inline-block bg-primary/10 text-primary text-sm font-medium rounded-full px-4 py-1 mb-4">For Institutions</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Admissions, modernized</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">Reduce admin burden while finding better-fit students.</p>
+  <section id="institutions" className="py-24 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-5xl mx-auto">
+      <ScrollReveal variant="blur-in">
+        <div className="text-center mb-16">
+          <span className="inline-block bg-primary/10 text-primary text-sm font-medium rounded-full px-4 py-1.5 mb-4">For Institutions</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">Admissions, transformed</h2>
+          <p className="text-muted-foreground max-w-lg mx-auto text-lg">See the difference UniPaith makes — side by side.</p>
         </div>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 gap-8">
-        {features.map((f, i) => (
-          <ScrollReveal key={i} delay={i * 120}>
-            <div className="bg-card rounded-2xl border p-8 shadow-sm hover:shadow-md transition-shadow h-full">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                <f.icon className="text-primary" size={28} />
+      <div className="bg-card rounded-2xl border shadow-sm overflow-hidden">
+        {/* Header */}
+        <div className="grid grid-cols-2 border-b">
+          <ScrollReveal delay={100} variant="fade-left">
+            <div className="p-6 sm:p-8 text-center bg-destructive/5">
+              <h3 className="text-lg font-bold text-destructive">Before UniPaith</h3>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={200} variant="fade-right">
+            <div className="p-6 sm:p-8 text-center bg-primary/5">
+              <h3 className="text-lg font-bold text-primary">After UniPaith</h3>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Rows */}
+        {comparisons.map((row, i) => (
+          <ScrollReveal key={i} delay={300 + i * 150}>
+            <div className={`grid grid-cols-2 ${i < comparisons.length - 1 ? "border-b" : ""}`}>
+              <div className="p-5 sm:p-6 flex items-start gap-3 bg-destructive/[0.02]">
+                <X className="text-destructive flex-shrink-0 mt-0.5" size={18} />
+                <p className="text-sm text-muted-foreground">{row.before}</p>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{f.title}</h3>
-              <p className="text-sm text-muted-foreground">{f.description}</p>
+              <div className="p-5 sm:p-6 flex items-start gap-3 bg-primary/[0.02]">
+                <Check className="text-primary flex-shrink-0 mt-0.5" size={18} />
+                <p className="text-sm text-foreground font-medium">{row.after}</p>
+              </div>
             </div>
           </ScrollReveal>
         ))}
