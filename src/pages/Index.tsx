@@ -8,14 +8,18 @@ import FlywheelSection from "@/components/landing/FlywheelSection";
 import SocialProofSection from "@/components/landing/SocialProofSection";
 import DualCTASection from "@/components/landing/DualCTASection";
 import Footer from "@/components/landing/Footer";
+import NarrativeBreak from "@/components/landing/NarrativeBreak";
 
 const Index = () => (
   <div className="min-h-screen">
     <Navbar />
     <HeroSection />
     <ProblemSection />
+    <NarrativeBreak text="But what if it didn't have to be this way?" />
     <StudentsSection />
+    <NarrativeBreak text="And it's not just students who benefit." />
     <InstitutionsSection />
+    <NarrativeBreak text="Here's the intelligence behind it all." />
     <AIFeaturesSection />
     <FlywheelSection />
     <SocialProofSection />
