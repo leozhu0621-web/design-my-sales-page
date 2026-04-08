@@ -7,6 +7,7 @@ import AIFeaturesSection from "@/components/landing/AIFeaturesSection";
 import FlywheelSection from "@/components/landing/FlywheelSection";
 import SocialProofSection from "@/components/landing/SocialProofSection";
 import DualCTASection from "@/components/landing/DualCTASection";
+import FAQSection from "@/components/landing/FAQSection";
 import Footer from "@/components/landing/Footer";
 import NarrativeBreak from "@/components/landing/NarrativeBreak";
 
@@ -23,6 +24,7 @@ const Index = () => (
     <AIFeaturesSection />
     <FlywheelSection />
     <SocialProofSection />
+    <FAQSection />
     <DualCTASection />
     <Footer />
   </div>
