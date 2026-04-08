@@ -55,8 +55,8 @@ const AIFeaturesSection = () => (
             <div className={`flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10`}>
               {/* Text side */}
               <div className="flex-1">
-                <div className={`w-14 h-14 rounded-xl ${f.bg} flex items-center justify-center mb-5`}>
-                  <f.icon className={f.color} size={28} />
+                <div className={`w-14 h-14 rounded-xl ${f.bg} flex items-center justify-center mb-5 group`}>
+                  <f.icon className={`${f.color} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`} size={28} />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">{f.title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-base">{f.description}</p>
@@ -65,7 +65,7 @@ const AIFeaturesSection = () => (
               {/* Visual mock */}
               <div className="flex-1 w-full">
                 <div className={`bg-gradient-to-br ${f.mockBg} rounded-2xl border p-8 h-48 sm:h-56 flex items-center justify-center`}>
-                  <div className="bg-card/80 backdrop-blur rounded-xl p-6 shadow-lg border w-full max-w-xs">
+                  <div className="bg-card/80 backdrop-blur rounded-xl p-6 shadow-lg border w-full max-w-xs hover-lift">
                     <div className="flex items-center gap-3 mb-3">
                       <div className={`w-8 h-8 rounded-lg ${f.bg} flex items-center justify-center`}>
                         <f.icon className={f.color} size={16} />

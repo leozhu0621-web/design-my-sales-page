@@ -51,7 +51,7 @@ const SocialProofSection = () => (
       <div className="grid md:grid-cols-2 gap-8">
         {testimonials.map((t, i) => (
           <ScrollReveal key={i} delay={i * 200} variant={i === 0 ? "fade-left" : "fade-right"}>
-            <div className="bg-primary-foreground/10 rounded-2xl p-8 backdrop-blur-sm">
+            <div className="bg-primary-foreground/10 rounded-2xl p-8 backdrop-blur-sm hover-lift">
               <p className="text-lg italic mb-6 leading-relaxed">"{t.quote}"</p>
               <div className="flex items-center gap-3">
                 <div className={`w-12 h-12 rounded-full ${t.bg} flex items-center justify-center text-sm font-bold text-primary`}>

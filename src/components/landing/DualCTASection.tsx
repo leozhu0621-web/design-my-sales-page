@@ -19,9 +19,9 @@ const DualCTASection = () => (
 
       <div className="grid md:grid-cols-2 gap-8">
         <ScrollReveal delay={100} variant="fade-left">
-          <div className="bg-card rounded-2xl border p-8 sm:p-10 text-center shadow-sm hover:shadow-lg transition-shadow h-full">
+          <div className="bg-card rounded-2xl border p-8 sm:p-10 text-center shadow-sm hover-lift hover:border-secondary/40 transition-all h-full group">
             <div className="w-16 h-16 rounded-2xl bg-secondary/15 flex items-center justify-center mx-auto mb-6">
-              <GraduationCap className="text-secondary" size={32} />
+              <GraduationCap className="text-secondary transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-3">Start your journey</h3>
             <p className="text-muted-foreground mb-8">Create your free UniPaith account and apply to programs worldwide with one profile. It takes 5 minutes.</p>
@@ -33,9 +33,9 @@ const DualCTASection = () => (
         </ScrollReveal>
 
         <ScrollReveal delay={300} variant="fade-right">
-          <div className="bg-card rounded-2xl border p-8 sm:p-10 text-center shadow-sm hover:shadow-lg transition-shadow h-full">
+          <div className="bg-card rounded-2xl border p-8 sm:p-10 text-center shadow-sm hover-lift hover:border-primary/40 transition-all h-full group">
             <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-              <Building2 className="text-primary" size={32} />
+              <Building2 className="text-primary transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-3">Transform admissions</h3>
             <p className="text-muted-foreground mb-8">See how UniPaith can streamline your intake, improve matching, and free your team to focus on what matters.</p>

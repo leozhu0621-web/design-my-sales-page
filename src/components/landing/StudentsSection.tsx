@@ -65,8 +65,8 @@ const StudentsSection = () => (
 
                 {/* Visual card */}
                 <div className="flex-1">
-                  <div className={`${step.bg} rounded-2xl p-8 flex items-center justify-center`}>
-                    <step.icon className={step.color} size={64} strokeWidth={1.2} />
+                  <div className={`${step.bg} rounded-2xl p-8 flex items-center justify-center hover-lift group`}>
+                    <step.icon className={`${step.color} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`} size={64} strokeWidth={1.2} />
                   </div>
                 </div>
               </div>

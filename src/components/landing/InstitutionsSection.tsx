@@ -37,7 +37,7 @@ const InstitutionsSection = () => (
         {/* Rows */}
         {comparisons.map((row, i) => (
           <ScrollReveal key={i} delay={300 + i * 150}>
-            <div className={`grid grid-cols-2 ${i < comparisons.length - 1 ? "border-b" : ""}`}>
+            <div className={`grid grid-cols-2 transition-colors duration-200 hover:bg-muted/30 ${i < comparisons.length - 1 ? "border-b" : ""}`}>
               <div className="p-5 sm:p-6 flex items-start gap-3 bg-destructive/[0.02]">
                 <X className="text-destructive flex-shrink-0 mt-0.5" size={18} />
                 <p className="text-sm text-muted-foreground">{row.before}</p>

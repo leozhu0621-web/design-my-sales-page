@@ -97,3 +97,24 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .story-link {
+    @apply relative inline-block;
+  }
+  .story-link::after {
+    content: '';
+    @apply absolute w-full h-0.5 bottom-0 left-0 bg-primary origin-bottom-right transition-transform duration-300 scale-x-0;
+  }
+  .story-link:hover::after {
+    @apply origin-bottom-left scale-x-100;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 8px 25px -5px hsl(var(--foreground) / 0.1);
+  }
+}
