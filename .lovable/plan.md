@@ -1,43 +1,33 @@
 
 
-# Add Micro-Interactions & Polish
+# Add FAQ Accordion Section
 
-## Changes
+## What
+A new FAQ section placed between SocialProofSection and DualCTASection, using the existing shadcn Accordion component. Two columns on desktop: one for student questions, one for institution questions.
 
-### 1. Global utility classes (`src/index.css`)
-Add reusable CSS classes:
-- **`.story-link`** — animated underline that expands on hover (for nav links)
-- **`.hover-lift`** — cards lift up with enhanced shadow on hover
-- **`.btn-press`** — subtle scale-down on active press for buttons
+## Content
 
-### 2. Navbar animated underlines (`Navbar.tsx`)
-- Add the `story-link` class to desktop nav links so they get an animated underline on hover
-- Add hover scale to the brand logo text
+**For Students:**
+- "Is UniPaith really free for students?" — Yes, always free. We're funded by institutional partnerships.
+- "How does the AI matching work?" — Analyzes your profile, preferences, and goals to recommend best-fit programs — no guesswork.
+- "Can I apply to multiple universities at once?" — Yes, one profile powers all your applications. Fill it once, apply everywhere.
+- "Is my data safe?" — Absolutely. Your data is encrypted and never shared without your explicit consent.
 
-### 3. Button press animation (`button.tsx`)
-- Add `active:scale-[0.97] transition-transform` to the base button variants so all buttons feel tactile on click
+**For Institutions:**
+- "How does UniPaith help us find better candidates?" — AI matching surfaces students whose profiles align with your programs, improving yield and fit.
+- "What does integration look like?" — A simple API or dashboard — no need to overhaul your existing admissions systems.
+- "How is UniPaith priced for institutions?" — Flexible plans based on institution size. Request a demo for a tailored quote.
+- "Can we customize our institution profile?" — Yes, showcase your programs, campus culture, and unique strengths to attract the right students.
 
-### 4. Card hover effects across sections
-- **Students Section**: Add `hover-lift` to the visual icon cards (the colored rounded boxes)
-- **Institutions Section**: Add subtle row highlight on hover for the before/after comparison rows
-- **AI Features Section**: Add `hover-lift` to the mock UI cards
-- **Social Proof Section**: Add `hover-lift` to testimonial cards
-- **Dual CTA Section**: Add `hover-lift` and a subtle border-color transition to the two CTA cards
-
-### 5. Icon micro-animations
-- Add `group` class to card containers and `group-hover:scale-110 group-hover:rotate-3 transition-transform` to icons inside cards, so icons subtly grow/tilt on hover
+## Design
+- Section title "Frequently Asked Questions" with a short subtitle
+- Two-column grid (stacked on mobile) with "For Students" and "For Institutions" headers
+- Uses existing `Accordion`, `AccordionItem`, `AccordionTrigger`, `AccordionContent` from shadcn
+- Wrapped in `ScrollReveal` for fade-in animation
+- Warm cream/neutral background to match page rhythm
 
 ## Technical Details
 
-**Files to modify:**
-- `src/index.css` — add `.story-link`, `.hover-lift`, `.btn-press` utility classes
-- `src/components/ui/button.tsx` — add `active:scale-[0.97]` to base variant string
-- `src/components/landing/Navbar.tsx` — apply `story-link` class to nav links
-- `src/components/landing/StudentsSection.tsx` — hover-lift on cards, icon animation
-- `src/components/landing/InstitutionsSection.tsx` — row hover highlight
-- `src/components/landing/AIFeaturesSection.tsx` — hover-lift on mock cards, icon animation
-- `src/components/landing/SocialProofSection.tsx` — hover-lift on testimonial cards
-- `src/components/landing/DualCTASection.tsx` — enhanced hover on CTA cards, icon animation
-
-No new dependencies needed.
+**Create:** `src/components/landing/FAQSection.tsx`
+**Edit:** `src/pages/Index.tsx` — import and place `<FAQSection />` between `<SocialProofSection />` and `<DualCTASection />`
 
