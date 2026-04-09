@@ -17,11 +17,11 @@ const institutionFAQs = [
 ];
 
 const FAQSection = () => (
-  <section className="py-24 px-4 bg-[hsl(var(--cream-bg))]">
+  <section className="py-24 px-4 bg-background">
     <div className="max-w-5xl mx-auto">
       <ScrollReveal>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -33,13 +33,13 @@ const FAQSection = () => (
       <div className="grid md:grid-cols-2 gap-10">
         <ScrollReveal variant="fade-left" delay={100}>
           <div className="flex items-center gap-2 mb-4">
-            <GraduationCap className="h-5 w-5 text-[hsl(var(--coral))]" />
-            <h3 className="text-xl font-semibold text-foreground">For Students</h3>
+            <GraduationCap className="h-5 w-5 text-gold-500" />
+            <h3 className="text-xl font-semibold text-foreground font-heading">For Students</h3>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {studentFAQs.map((faq, i) => (
               <AccordionItem key={i} value={`student-${i}`}>
-                <AccordionTrigger className="text-left text-foreground hover:no-underline hover:text-[hsl(var(--coral))] transition-colors">
+                <AccordionTrigger className="text-left text-foreground hover:no-underline hover:text-gold-600 transition-colors">
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -52,13 +52,13 @@ const FAQSection = () => (
 
         <ScrollReveal variant="fade-right" delay={200}>
           <div className="flex items-center gap-2 mb-4">
-            <Building2 className="h-5 w-5 text-[hsl(var(--teal))]" />
-            <h3 className="text-xl font-semibold text-foreground">For Institutions</h3>
+            <Building2 className="h-5 w-5 text-primary" />
+            <h3 className="text-xl font-semibold text-foreground font-heading">For Institutions</h3>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {institutionFAQs.map((faq, i) => (
               <AccordionItem key={i} value={`institution-${i}`}>
-                <AccordionTrigger className="text-left text-foreground hover:no-underline hover:text-[hsl(var(--teal))] transition-colors">
+                <AccordionTrigger className="text-left text-foreground hover:no-underline hover:text-primary transition-colors">
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">

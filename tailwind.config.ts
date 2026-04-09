@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ["Lora", "serif"],
+        body: ["Inter", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,6 +60,34 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        forest: {
+          50: "#F2F5F0",
+          100: "#E0E7DB",
+          200: "#C1CFBA",
+          300: "#A4AC86",
+          400: "#6B7A5A",
+          500: "#4A6345",
+          600: "#2D4A2B",
+          700: "#223A21",
+          800: "#1A2E1A",
+          900: "#0F1C0F",
+        },
+        sage: {
+          300: "#A8AE9C",
+          400: "#8F9682",
+          500: "#7D8471",
+          600: "#686F5E",
+        },
+        gold: {
+          50: "#FFF8E7",
+          100: "#FFEFC2",
+          200: "#FFE08A",
+          300: "#FFCF4D",
+          400: "#F5B800",
+          500: "#E5A100",
+          600: "#B8820D",
+          700: "#8C6310",
         },
       },
       borderRadius: {
