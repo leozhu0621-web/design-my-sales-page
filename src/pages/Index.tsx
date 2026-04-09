@@ -16,7 +16,7 @@ const Index = () => (
     <Navbar />
     <HeroSection />
     <ProblemSection />
-    <NarrativeBreak text="But what if it didn't have to be this way?" />
+    <NarrativeBreak text="What if one platform could fix both sides at once?" />
     <StudentsSection />
     <NarrativeBreak text="And it's not just students who benefit." />
     <InstitutionsSection />
