@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Building2 } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import WaitlistForm from "./WaitlistForm";
 
 const DualCTASection = () => (
   <section id="cta" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-navy-500 to-harbor-500">
@@ -22,10 +23,11 @@ const DualCTASection = () => (
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-3 font-heading">Start your journey</h3>
             <p className="text-muted-foreground mb-8">Be among the first to experience a smarter way to discover and apply to programs. Join our waitlist — it takes 30 seconds.</p>
-            <Button size="lg" className="w-full sm:w-auto px-10 py-7 rounded-xl text-base bg-harbor-500 hover:bg-harbor-600 text-ivory-100 text-lg">
-              Join the Waitlist
-              <ArrowRight size={20} className="ml-2" />
-            </Button>
+            <WaitlistForm
+              source="cta-student"
+              className="w-full max-w-sm mx-auto"
+              buttonClassName="bg-harbor-500 hover:bg-harbor-600 text-ivory-100"
+            />
           </div>
         </ScrollReveal>
 

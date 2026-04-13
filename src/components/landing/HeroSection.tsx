@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, ChevronDown } from "lucide-react";
+import { Sparkles, ChevronDown } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import WaitlistForm from "./WaitlistForm";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -34,17 +35,11 @@ const HeroSection = () => (
       </ScrollReveal>
 
       <ScrollReveal delay={600}>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="text-base px-10 py-7 rounded-xl shadow-lg text-lg bg-harbor-500 hover:bg-harbor-600 text-ivory-100" asChild>
-            <a href="#cta">
-              Join the Waitlist
-              <ArrowRight size={20} className="ml-2" />
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" className="text-base px-10 py-7 rounded-xl text-lg border-slate-500 text-harbor-500 hover:bg-harbor-500/5" asChild>
-            <a href="#students">See How It Works</a>
-          </Button>
-        </div>
+        <WaitlistForm
+          source="hero"
+          className="max-w-md mx-auto"
+          buttonClassName="bg-harbor-500 hover:bg-harbor-600 text-ivory-100 shadow-lg"
+        />
       </ScrollReveal>
     </div>
 
