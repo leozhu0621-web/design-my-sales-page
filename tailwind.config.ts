@@ -94,11 +94,11 @@ export default {
         },
         // Warm Gold — CTAs, highlights, key moments
         gold: {
-          300: "#E8B85A",
-          400: "#DCA940",
-          500: "#D4992A",
-          600: "#B38024",
-          700: "#92671D",
+          300: "#E0A83E",
+          400: "#D49A2C",
+          500: "#C8881A",
+          600: "#A87216",
+          700: "#885C12",
         },
       },
       borderRadius: {
