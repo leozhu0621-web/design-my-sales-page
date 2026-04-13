@@ -95,11 +95,11 @@ export default {
         },
         // Sunlit Yellow — CTAs, highlights, key moments
         gold: {
-          300: "#FFF74D",
-          400: "#FFF41A",
-          500: "#FFF200",
-          600: "#D9CE00",
-          700: "#B3AA00",
+          300: "#FFF04D",
+          400: "#FFEA1A",
+          500: "#FFE500",
+          600: "#D9C300",
+          700: "#B3A000",
         },
       },
       borderRadius: {
