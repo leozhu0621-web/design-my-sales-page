@@ -29,10 +29,10 @@ const Navbar = () => {
               </Link>
             ))}
             <Button variant="outline" size="sm" className="border-mist-500 text-ivory-100 hover:bg-harbor-500 hover:text-ivory-100" asChild>
-              <Link to="/#cta">Request a Demo</Link>
+              <a href="https://app.unipaith.co/login">Request a Demo</a>
             </Button>
             <Button size="sm" className="bg-ivory-100 text-navy-500 hover:bg-ivory-200" asChild>
-              <Link to="/#cta">Join the Waitlist</Link>
+              <a href="https://app.unipaith.co/login">Join the Waitlist</a>
             </Button>
           </div>
 
@@ -51,10 +51,10 @@ const Navbar = () => {
           ))}
           <div className="flex flex-col gap-2 pt-2">
             <Button variant="outline" size="sm" className="border-mist-500 text-ivory-100 hover:bg-harbor-500" asChild>
-              <Link to="/#cta">Request a Demo</Link>
+              <a href="https://app.unipaith.co/login">Request a Demo</a>
             </Button>
             <Button size="sm" className="bg-ivory-100 text-navy-500 hover:bg-ivory-200" asChild>
-              <Link to="/#cta">Join the Waitlist</Link>
+              <a href="https://app.unipaith.co/login">Join the Waitlist</a>
             </Button>
           </div>
         </div>

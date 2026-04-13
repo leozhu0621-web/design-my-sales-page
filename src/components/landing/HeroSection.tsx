@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, ChevronDown } from "lucide-react";
+import { Sparkles, ChevronDown, ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import WaitlistForm from "./WaitlistForm";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -35,11 +34,14 @@ const HeroSection = () => (
       </ScrollReveal>
 
       <ScrollReveal delay={600}>
-        <WaitlistForm
-          source="hero"
-          className="max-w-md mx-auto"
-          buttonClassName="bg-harbor-500 hover:bg-harbor-600 text-ivory-100 shadow-lg"
-        />
+        <div className="max-w-md mx-auto">
+          <Button size="lg" className="h-12 rounded-xl px-8 bg-harbor-500 hover:bg-harbor-600 text-ivory-100 shadow-lg text-base" asChild>
+            <a href="https://app.unipaith.co/login">
+              Join the Waitlist
+              <ArrowRight size={18} className="ml-2" />
+            </a>
+          </Button>
+        </div>
       </ScrollReveal>
     </div>
 
