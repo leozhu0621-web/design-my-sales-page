@@ -61,37 +61,37 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Soft Off-White — light section backgrounds
+        // Warm White — light section backgrounds
         fog: {
-          50: "#FDFDFB",
-          100: "#FAFAF5",
-          200: "#F2F2EA",
+          50: "#FEFDFB",
+          100: "#FDFCF8",
+          200: "#F5F3EC",
         },
         // Cool Slate — subtle mid-tone, dividers
         steel: {
-          300: "#94A3B8",
-          400: "#7C8FA6",
-          500: "#64748B",
-          600: "#516179",
-          700: "#3E4E67",
+          300: "#8A96A8",
+          400: "#6B7A90",
+          500: "#4D5F78",
+          600: "#3D4E65",
+          700: "#2D3D52",
         },
-        // Indigo Navy — accent, links, mid-tone sections
+        // Cobalt — accent, links, mid-tone sections
         ocean: {
-          300: "#2D5294",
-          400: "#254681",
-          500: "#1E3A6E",
-          600: "#182F5A",
-          700: "#122446",
+          300: "#5A8FE0",
+          400: "#447ED9",
+          500: "#2E6DD4",
+          600: "#2558AA",
+          700: "#1C4480",
         },
-        // Near Black — dark sections, headers, primary text
+        // Midnight Navy — dark sections, headers, primary text
         navy: {
-          300: "#1A2D42",
-          400: "#122131",
-          500: "#0A1520",
-          600: "#08101A",
-          700: "#050B13",
-          800: "#03070D",
-          900: "#010306",
+          300: "#1A3050",
+          400: "#132443",
+          500: "#0C1C35",
+          600: "#09152A",
+          700: "#060E1F",
+          800: "#040A15",
+          900: "#02050B",
         },
         // Warm Amber — CTAs, highlights, key moments
         gold: {
