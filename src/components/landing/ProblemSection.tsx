@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 import AnimatedCounter from "./AnimatedCounter";
 
 const ProblemSection = () => (
-  <section id="problem" className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
+  <section id="problem" className="py-24 px-4 sm:px-6 lg:px-8 bg-mist-300/20">
     <div className="max-w-6xl mx-auto">
       <ScrollReveal variant="blur-in">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-foreground mb-6 font-heading">

@@ -9,13 +9,13 @@ const comparisons = [
 ];
 
 const InstitutionsSection = () => (
-  <section id="institutions" className="py-24 px-4 sm:px-6 lg:px-8 bg-mist-500/5">
+  <section id="institutions" className="py-24 px-4 sm:px-6 lg:px-8 bg-harbor-600">
     <div className="max-w-5xl mx-auto">
       <ScrollReveal variant="blur-in">
         <div className="text-center mb-16">
-          <span className="inline-block bg-slate-500/10 text-slate-500 text-sm font-medium rounded-full px-4 py-1.5 mb-4 uppercase tracking-wide">For Institutions</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 font-heading">Admissions, transformed</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-lg">See the difference UniPaith makes — side by side.</p>
+          <span className="inline-block bg-ivory-100/15 text-ivory-100 text-sm font-medium rounded-full px-4 py-1.5 mb-4 uppercase tracking-wide">For Institutions</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory-100 mb-4 font-heading">Admissions, transformed</h2>
+          <p className="text-ivory-100/70 max-w-lg mx-auto text-lg">See the difference UniPaith makes — side by side.</p>
         </div>
       </ScrollReveal>
 

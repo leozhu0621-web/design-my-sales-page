@@ -2,28 +2,28 @@ import { Users, TrendingUp, Award } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const nodes = [
-  { icon: Users, label: "More Participation", desc: "Students & institutions join the platform", color: "text-harbor-500", bg: "bg-harbor-500/10" },
-  { icon: TrendingUp, label: "Better Matching", desc: "AI improves with every data point", color: "text-slate-500", bg: "bg-slate-500/10" },
-  { icon: Award, label: "Better Outcomes", desc: "Higher satisfaction, higher yield", color: "text-mist-600", bg: "bg-mist-500/10" },
+  { icon: Users, label: "More Participation", desc: "Students & institutions join the platform", color: "text-harbor-300", bg: "bg-harbor-500/20" },
+  { icon: TrendingUp, label: "Better Matching", desc: "AI improves with every data point", color: "text-mist-400", bg: "bg-mist-500/20" },
+  { icon: Award, label: "Better Outcomes", desc: "Higher satisfaction, higher yield", color: "text-ivory-300", bg: "bg-ivory-200/20" },
 ];
 
 const FlywheelSection = () => (
-  <section id="flywheel" className="py-24 px-4 sm:px-6 lg:px-8 bg-mist-500/5">
+  <section id="flywheel" className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-500">
     <div className="max-w-4xl mx-auto text-center">
       <ScrollReveal variant="blur-in">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 font-heading">The UniPaith flywheel</h2>
-        <p className="text-muted-foreground max-w-lg mx-auto mb-20 text-lg">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory-100 mb-4 font-heading">The UniPaith flywheel</h2>
+        <p className="text-ivory-100/70 max-w-lg mx-auto mb-20 text-lg">
           Every participant makes the network smarter — creating a cycle that benefits everyone.
         </p>
       </ScrollReveal>
 
       <ScrollReveal delay={200} variant="scale-up">
         <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto">
-          <div className="absolute inset-0 rounded-full border-2 border-dashed border-mist-400 animate-orbit" style={{ animationDuration: "30s" }} />
+          <div className="absolute inset-0 rounded-full border-2 border-dashed border-ivory-100/20 animate-orbit" style={{ animationDuration: "30s" }} />
           
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-harbor-500/10 flex items-center justify-center">
-              <span className="text-sm sm:text-base font-bold text-harbor-500 font-heading">UniPaith</span>
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-harbor-500/20 flex items-center justify-center">
+              <span className="text-sm sm:text-base font-bold text-ivory-100 font-heading">UniPaith</span>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const FlywheelSection = () => (
       </ScrollReveal>
 
       <ScrollReveal delay={500}>
-        <p className="text-muted-foreground mt-24 text-base italic">
+        <p className="text-ivory-100/60 mt-24 text-base italic">
           More users → smarter AI → better matches → better outcomes → more users. The cycle keeps accelerating.
         </p>
       </ScrollReveal>
