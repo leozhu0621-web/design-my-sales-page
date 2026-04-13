@@ -1,107 +1,98 @@
 
 
-# Redesign Landing Page to "Forest Canopy + Gold" Spec
+# Complete Landing Page Redesign — New Color Palette & Structure
 
-This is a comprehensive redesign touching colors, typography, copy, and section content across the entire landing page based on your brand spec document.
+## Overview
+Tear down and rebuild the entire landing page with a new navy/slate/mist/ivory color palette and restructured navigation. The earthy forest green theme is replaced with a sophisticated deep blue scheme.
 
-## Summary of Changes
+## New Color System
 
-The current teal/coral/gold palette transforms to an earthy **forest green + warm gold** theme. All copy updates to match the spec's recommended text. The Social Proof section replaces fake metrics with a founder credibility block. CTAs change from "Create Free Account" to "Join the Waitlist." Headings switch to Lora serif font.
+```text
+Warm Ivory   #FEF6DC  — backgrounds, light sections
+Mist Blue    #80939B  — muted text, secondary elements
+Slate Blue   #586C7B  — body text, borders
+Deep Harbor  #273C4D  — headings, primary actions
+Midnight Navy #1A223F — dark sections, footer, navbar
+```
 
----
+## New Navigation
+Links: **Student** | **Institution** | **AI Engine** | **About**
+CTAs: **Request Demo** (outline) | **Join the Waitlist** (solid)
 
-## Technical Plan
+## What Changes
 
-### 1. Add Lora font (`index.html`)
-Add Google Fonts link for Lora (600, 700 weights) + Inter (400-700).
+### 1. Color tokens (`src/index.css`)
+Replace all `:root` and `.dark` CSS variables to map to the new palette:
+- `--background` → Warm Ivory
+- `--foreground` → Deep Harbor
+- `--primary` → Deep Harbor
+- `--secondary` → Slate Blue
+- `--muted` → Mist Blue tones
+- `--accent` → Warm Ivory/gold kept as accent
+- Dark mode section → Midnight Navy base
 
-### 2. Replace color system (`src/index.css`)
-Swap all `:root` CSS variables to the Forest Canopy palette:
-- `--primary: 118 27% 23%` (forest green)
-- `--secondary: 96 8% 48%` (sage)
-- `--accent: 42 100% 45%` (warm gold)
-- `--background: 40 33% 97%` (ivory)
-- `--foreground: 120 27% 14%` (deep forest)
-- Update all matching border, muted, ring, dark mode vars
-- Remove old `--coral`, `--teal`, `--cream-bg` custom properties if any
+### 2. Tailwind config (`tailwind.config.ts`)
+- Remove `forest`, `sage`, `gold` color scales
+- Add `ivory`, `mist`, `slate`, `harbor`, `navy` scales derived from the 5 hex values
+- Keep Lora + Inter fonts
 
-### 3. Add forest/sage/gold color scales (`tailwind.config.ts`)
-Add `forest`, `sage`, and `gold` color objects under `theme.extend.colors` for direct usage. Add `fontFamily: { heading: ['Lora', 'serif'], body: ['Inter', 'sans-serif'] }`.
+### 3. Navbar (`Navbar.tsx`)
+- Update links to: Student (`#students`), Institution (`#institutions`), AI Engine (`#ai-engine`), About (`#about`)
+- Restyle with Midnight Navy background, ivory text
+- CTA buttons use harbor/ivory scheme
 
-### 4. Navbar (`Navbar.tsx`)
-- Logo: "Uni" in `forest-600` font-normal, "Paith" in `forest-800` font-extrabold
-- Nav links reordered: For Students, For Institutions, How It Works, AI Features
-- CTAs: "Request a Demo" (ghost/outline) + "Join the Waitlist" (primary filled)
+### 4. Hero Section (`HeroSection.tsx`)
+- Replace forest/gold floating blobs with navy/mist/ivory gradient blobs
+- Update badge, heading accent color, and button colors to new palette
+- Keep copy structure but restyle
 
-### 5. Hero Section (`HeroSection.tsx`)
-- Headline: "Apply once. Go anywhere."
-- Subheadline: updated per spec (mentions dual audience)
-- Primary CTA: "Join the Waitlist" (gold button)
-- Secondary CTA: "See How It Works" → scrolls to `#students`
-- Floating orb colors: forest-100, olive, gold-300 tints
+### 5. Problem Section (`ProblemSection.tsx`)
+- Swap all `forest-*`, `gold-*` references to new palette equivalents
+- Counter colors → harbor, slate, mist
 
-### 6. Problem Section (`ProblemSection.tsx`)
-- Heading: "Admissions is broken — on both sides"
-- Subheading updated per spec
-- Stats: 12+, 40 hrs, 68% with updated labels
-- Student card body and bullets updated per spec copy
-- Institution card body and bullets updated per spec copy
+### 6. Narrative Breaks (`NarrativeBreak.tsx`)
+- Dark band uses Midnight Navy instead of forest-800
+- Accent line uses ivory or mist instead of gold
 
-### 7. Narrative Breaks (`NarrativeBreak.tsx` + `Index.tsx`)
-- Style: dark band (`forest-800` bg), ivory text, gold accent line
-- Break 1: "What if one platform could fix both sides at once?"
-- Break 2 and 3: keep as-is
+### 7. Students Section (`StudentsSection.tsx`)
+- Step colors/badges → harbor, slate, mist tones
+- Section background → ivory
 
-### 8. Students Section (`StudentsSection.tsx`)
-- Subheading: "From overwhelmed to admitted — in three steps."
-- Step descriptions updated per spec copy
+### 8. Institutions Section (`InstitutionsSection.tsx`)
+- Comparison table restyled with harbor/slate palette
+- Section ID stays `#institutions`
 
-### 9. Institutions Section (`InstitutionsSection.tsx`)
-- "After UniPaith" header changed to "With UniPaith"
-- Row copy updated per spec (e.g., "AI surfaces top candidates based on your criteria")
+### 9. AI Features Section (`AIFeaturesSection.tsx`)
+- Section ID → `#ai-engine` to match new nav
+- Feature icon colors → harbor, slate, mist scheme
+- Mock UI cards reworked with new palette
 
-### 10. AI Features Section (`AIFeaturesSection.tsx`)
-- Subheading: "From discovery to decision, AI works behind the scenes so you can focus on what matters."
-- Feature descriptions updated per spec copy
+### 10. Flywheel Section (`FlywheelSection.tsx`)
+- Orbit/node colors → new palette
+- Background → light mist tone
 
-### 11. Flywheel Section (`FlywheelSection.tsx`)
-- Copy updates per spec
-- Closing line: "More users → smarter AI → better matches → better outcomes → more users. The cycle keeps accelerating."
+### 11. Social Proof / About Section (`SocialProofSection.tsx`)
+- Add `id="about"` anchor for new nav link
+- Restyle founder cards with harbor/ivory scheme
 
-### 12. Social Proof Section (`SocialProofSection.tsx`) — **complete rewrite**
-- Replace fake stats and testimonials with **founder credibility block** (Option B from spec)
-- Heading: "Built by people who've lived both sides"
-- Body paragraph about co-founders
-- Two founder cards: Leo Zhu (Co-Founder, Product & Operations) and Rick Arrowood (Co-Founder, Strategy & Partnerships)
+### 12. FAQ Section (`FAQSection.tsx`)
+- Restyle accordion triggers and icons with new palette
 
-### 13. FAQ Section (`FAQSection.tsx`)
-- Update background to match new palette (remove old `--cream-bg` reference, use ivory bg)
+### 13. Dual CTA Section (`DualCTASection.tsx`)
+- Gradient background → Midnight Navy to Deep Harbor
+- Button colors → ivory on harbor, outline variant
 
-### 14. Dual CTA Section (`DualCTASection.tsx`)
-- Heading: "Your future starts here"
-- Subheading updated per spec
-- Student card: "Join the Waitlist" button (gold/primary)
-- Institution card: "Request a Demo" button (outline)
-- Background: gradient from forest-600 to forest-800 with ivory text
+### 14. Footer (`Footer.tsx`)
+- Background → Midnight Navy
+- Link hover → Warm Ivory
+- Update nav links to match new structure
 
-### 15. Footer (`Footer.tsx`)
-- Background: forest-900 near-black
-- Tagline: "Apply once, go anywhere. AI-powered admissions for a connected world."
-- Remove "Careers" link, keep About + Contact
-- Gold hover on links
-
-### 16. Section backgrounds per spec pattern
-Apply the alternating background pattern: ivory → white → dark bands → forest-50 etc.
-
-### 17. Update memory
-Save new brand colors and design decisions to project memory.
-
----
+### 15. Update project memory
+Save new color palette to `mem://design/brand-colors` and update index.
 
 ## Files Modified
-- `index.html` — add Lora font
-- `src/index.css` — full `:root` variable replacement
-- `tailwind.config.ts` — add forest/sage/gold colors + font families
-- All 11 landing components updated for copy + color references
-- `mem://design/brand-colors` and `mem://index.md` — updated
+- `src/index.css` — full CSS variable replacement
+- `tailwind.config.ts` — new color scales
+- All 12 landing components restyled
+- `mem://design/brand-colors` and `mem://index.md`
 
