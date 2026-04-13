@@ -1,5 +1,4 @@
 import ScrollReveal from "./ScrollReveal";
-import { Users, User } from "lucide-react";
 
 const founders = [
   {
@@ -7,21 +6,21 @@ const founders = [
     role: "Co-Founder · Product & Operations",
     desc: "International student turned entrepreneur — navigated the admissions system firsthand.",
     initials: "LZ",
-    bg: "bg-gold-100",
-    textColor: "text-gold-700",
+    bg: "bg-harbor-500/10",
+    textColor: "text-harbor-500",
   },
   {
     name: "Rick Arrowood",
     role: "Co-Founder · Strategy & Partnerships",
     desc: "Education executive and academic — decades on the institutional side of admissions.",
     initials: "RA",
-    bg: "bg-forest-100",
-    textColor: "text-forest-700",
+    bg: "bg-slate-500/10",
+    textColor: "text-slate-500",
   },
 ];
 
 const SocialProofSection = () => (
-  <section className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
+  <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
     <div className="max-w-4xl mx-auto">
       <ScrollReveal variant="blur-in">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 text-foreground font-heading">
@@ -40,7 +39,7 @@ const SocialProofSection = () => (
                 <span className={`text-lg font-bold ${f.textColor}`}>{f.initials}</span>
               </div>
               <h3 className="text-xl font-bold text-foreground mb-1 font-heading">{f.name}</h3>
-              <p className="text-sm text-primary font-medium mb-3">{f.role}</p>
+              <p className="text-sm text-harbor-500 font-medium mb-3">{f.role}</p>
               <p className="text-muted-foreground text-sm">{f.desc}</p>
             </div>
           </ScrollReveal>

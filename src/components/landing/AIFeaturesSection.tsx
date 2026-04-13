@@ -6,42 +6,42 @@ const features = [
     icon: Sparkles,
     title: "Smart Matching",
     description: "Our AI doesn't just filter — it understands. It analyzes your profile against thousands of program criteria and surfaces the schools where you'll thrive. No more scrolling through endless lists.",
-    color: "text-gold-600",
-    bg: "bg-gold-100",
-    mockBg: "from-gold-100 to-gold-50",
+    color: "text-harbor-500",
+    bg: "bg-harbor-500/10",
+    mockBg: "from-harbor-500/10 to-harbor-500/5",
   },
   {
     icon: FileSearch,
     title: "Document Intelligence",
     description: "Upload your transcripts, essays, and certificates once. Our AI extracts, structures, and verifies everything — turning messy documents into clean, actionable data for institutions.",
-    color: "text-primary",
-    bg: "bg-primary/10",
-    mockBg: "from-forest-100 to-forest-50",
+    color: "text-slate-500",
+    bg: "bg-slate-500/10",
+    mockBg: "from-slate-500/10 to-slate-500/5",
   },
   {
     icon: Activity,
     title: "Readiness Diagnostics",
     description: "Before you hit submit, know exactly where you stand. Your readiness score shows strengths, flags gaps, and tells you what to improve — like a GPS for your application.",
-    color: "text-forest-500",
-    bg: "bg-forest-100",
-    mockBg: "from-forest-200/50 to-forest-100/50",
+    color: "text-mist-600",
+    bg: "bg-mist-500/10",
+    mockBg: "from-mist-500/10 to-mist-500/5",
   },
   {
     icon: AlertTriangle,
     title: "Integrity Shield",
     description: "Every application passes through anomaly detection, plagiarism checks, and document verification. Institutions get peace of mind. Students get a fair process.",
-    color: "text-primary",
-    bg: "bg-primary/10",
-    mockBg: "from-forest-100 to-forest-50",
+    color: "text-navy-500",
+    bg: "bg-navy-500/10",
+    mockBg: "from-navy-500/10 to-navy-500/5",
   },
 ];
 
 const AIFeaturesSection = () => (
-  <section id="ai-features" className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
+  <section id="ai-engine" className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
     <div className="max-w-5xl mx-auto">
       <ScrollReveal variant="blur-in">
         <div className="text-center mb-20">
-          <span className="inline-flex items-center gap-1.5 bg-gold-100 text-gold-700 text-sm font-medium rounded-full px-5 py-1.5 mb-4">
+          <span className="inline-flex items-center gap-1.5 bg-harbor-500/10 text-harbor-500 text-sm font-medium rounded-full px-5 py-1.5 mb-4">
             <Sparkles size={14} /> Powered by AI
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 font-heading">Intelligence at every step</h2>

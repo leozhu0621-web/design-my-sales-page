@@ -6,25 +6,25 @@ const steps = [
     icon: UserCircle,
     title: "Build Your Universal Profile",
     description: "Create one comprehensive profile with your academics, activities, essays, and documents. Write it once — use it everywhere.",
-    color: "text-gold-600",
-    bg: "bg-gold-100",
-    line: "bg-gold-500",
+    color: "text-harbor-500",
+    bg: "bg-harbor-500/10",
+    line: "bg-harbor-500",
   },
   {
     icon: Search,
     title: "Discover & Match Programs",
     description: "Our AI analyzes your profile against thousands of program criteria and recommends schools where you're a genuine fit — not just a name on a list.",
-    color: "text-primary",
-    bg: "bg-primary/10",
-    line: "bg-primary",
+    color: "text-slate-500",
+    bg: "bg-slate-500/10",
+    line: "bg-slate-500",
   },
   {
     icon: Send,
     title: "Apply & Track Everything",
     description: "Submit applications to multiple schools from a single dashboard. Track every status, deadline, and update in one place.",
-    color: "text-forest-500",
-    bg: "bg-forest-100",
-    line: "bg-forest-500",
+    color: "text-mist-600",
+    bg: "bg-mist-500/10",
+    line: "bg-mist-500",
   },
 ];
 
@@ -33,7 +33,7 @@ const StudentsSection = () => (
     <div className="max-w-5xl mx-auto">
       <ScrollReveal variant="blur-in">
         <div className="text-center mb-20">
-          <span className="inline-block bg-gold-100 text-gold-700 text-sm font-medium rounded-full px-4 py-1.5 mb-4 uppercase tracking-wide">For Students</span>
+          <span className="inline-block bg-harbor-500/10 text-harbor-500 text-sm font-medium rounded-full px-4 py-1.5 mb-4 uppercase tracking-wide">For Students</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 font-heading">Your path, simplified</h2>
           <p className="text-muted-foreground max-w-lg mx-auto text-lg">From overwhelmed to admitted — in three steps.</p>
         </div>
@@ -48,7 +48,7 @@ const StudentsSection = () => (
               <div className={`flex flex-col md:flex-row items-center gap-8 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className="flex-1 text-center md:text-left">
                   <div className="inline-flex items-center gap-2 mb-3">
-                    <span className={`w-8 h-8 rounded-full ${step.line} text-card flex items-center justify-center text-sm font-bold`}>
+                    <span className={`w-8 h-8 rounded-full ${step.line} text-ivory-100 flex items-center justify-center text-sm font-bold`}>
                       {i + 1}
                     </span>
                     <h3 className="text-xl font-bold text-foreground font-heading">{step.title}</h3>
