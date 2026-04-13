@@ -95,11 +95,11 @@ export default {
         },
         // Warm Amber — CTAs, highlights, key moments
         gold: {
-          300: "#FFE04D",
-          400: "#FFD81A",
-          500: "#FFD000",
-          600: "#D9B000",
-          700: "#B39100",
+          300: "#FFDB4D",
+          400: "#FFCA1A",
+          500: "#FFBF00",
+          600: "#D9A300",
+          700: "#B38600",
         },
       },
       borderRadius: {
