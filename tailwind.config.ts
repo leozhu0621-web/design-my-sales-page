@@ -61,44 +61,44 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Warm Parchment — light section backgrounds
+        // Pure White — light section backgrounds
         fog: {
-          50: "#FBF9F4",
-          100: "#F8F5EE",
-          200: "#F0ECE2",
+          50: "#FFFFFF",
+          100: "#FAFBFD",
+          200: "#EDF2F8",
         },
-        // Pearl — subtle mid-tone, dividers
+        // Ice Blue — subtle mid-tone, dividers
         steel: {
-          300: "#E8E3D8",
-          400: "#DDD7C9",
-          500: "#D2CBBA",
-          600: "#C7BFAB",
+          300: "#E0E8F2",
+          400: "#D3DEED",
+          500: "#C6D4E8",
+          600: "#B9CAE3",
         },
-        // Deep Sapphire — accent, links, mid-tone sections
+        // Royal Blue — accent, links, mid-tone sections
         ocean: {
-          300: "#2E5A96",
-          400: "#234B82",
-          500: "#1B3D6E",
-          600: "#15315A",
-          700: "#0F2546",
+          300: "#3D6ABD",
+          400: "#315EB0",
+          500: "#2952A3",
+          600: "#214488",
+          700: "#19366D",
         },
-        // Blackened Navy — dark sections, headers, primary text
+        // Deep Navy — dark sections, headers, primary text
         navy: {
-          300: "#1A2D4A",
-          400: "#142338",
-          500: "#0D1927",
-          600: "#0A1320",
-          700: "#070D18",
-          800: "#040810",
-          900: "#020408",
+          300: "#253654",
+          400: "#1A2A48",
+          500: "#0F1F3D",
+          600: "#0C1931",
+          700: "#091325",
+          800: "#060D19",
+          900: "#03070D",
         },
-        // Antique Gold — CTAs, highlights, key moments
+        // Vivid Amber — CTAs, highlights, key moments
         gold: {
-          300: "#D9C06E",
-          400: "#D1B45A",
-          500: "#C9A84C",
-          600: "#A88C3F",
-          700: "#877032",
+          300: "#F5CC5D",
+          400: "#F2C043",
+          500: "#F0B429",
+          600: "#D49E1F",
+          700: "#B88818",
         },
       },
       borderRadius: {
