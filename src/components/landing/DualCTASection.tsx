@@ -39,10 +39,7 @@ const DualCTASection = () => (
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-3 font-heading">Transform your admissions</h3>
             <p className="text-muted-foreground mb-8">See how UniPaith can streamline your intake, improve matching, and free your team to focus on what matters.</p>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto px-10 py-7 rounded-xl text-base border-harbor-500 text-harbor-500 hover:bg-harbor-500 hover:text-ivory-100 text-lg">
-              Request a Demo
-              <ArrowRight size={20} className="ml-2" />
-            </Button>
+            <RequestDemoForm className="w-full max-w-sm mx-auto" />
           </div>
         </ScrollReveal>
       </div>
