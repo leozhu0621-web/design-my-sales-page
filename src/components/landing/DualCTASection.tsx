@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
-import WaitlistForm from "./WaitlistForm";
+import RequestDemoForm from "./RequestDemoForm";
 
 const DualCTASection = () => (
   <section id="cta" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-navy-500 to-harbor-500">
