@@ -93,13 +93,13 @@ export default {
           800: "#040A15",
           900: "#02050B",
         },
-        // Warm Amber — CTAs, highlights, key moments
+        // Sunlit Yellow — CTAs, highlights, key moments
         gold: {
-          300: "#FFF04D",
-          400: "#FFEA1A",
-          500: "#FFE500",
-          600: "#D9C300",
-          700: "#B3A000",
+          300: "#FFF54D",
+          400: "#FFF11A",
+          500: "#FFED00",
+          600: "#D9CA00",
+          700: "#B3A600",
         },
       },
       borderRadius: {

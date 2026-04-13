@@ -35,7 +35,7 @@ const HeroSection = () => (
 
       <ScrollReveal delay={600}>
         <div className="max-w-md mx-auto">
-          <Button size="lg" className="h-12 rounded-xl px-8 bg-gold-500 hover:bg-gold-400 text-[#0C1C35] shadow-[0_0_20px_rgba(255,229,0,0.4)] text-base font-semibold" asChild>
+          <Button size="lg" className="h-12 rounded-xl px-8 bg-gold-500 hover:bg-gold-400 text-[#0C1C35] shadow-[0_0_20px_rgba(255,237,0,0.4)] text-base font-semibold" asChild>
             <a href="https://app.unipaith.co/login">
               Join the Waitlist
               <ArrowRight size={18} className="ml-2" />
