@@ -1,39 +1,43 @@
 
 
-# Separate Pages for Student, Institution, AI Engine, and About
+# Waitlist Email Signup Form
 
 ## Overview
-Move each section from the single-page layout into its own dedicated route. The homepage keeps Hero, Problem, Flywheel, FAQ, and Dual CTA. Navbar and Footer links become React Router `<Link>` elements.
+Create a `waitlist_entries` table, then replace the static "Join the Waitlist" buttons with inline email signup forms that store entries in the database. No authentication required — this is a public-facing form.
 
 ## Changes
 
-### 1. Create 4 new page files
-- `src/pages/Students.tsx` — wraps `StudentsSection` with Navbar + Footer
-- `src/pages/Institutions.tsx` — wraps `InstitutionsSection` with Navbar + Footer
-- `src/pages/AIEngine.tsx` — wraps `AIFeaturesSection` with Navbar + Footer
-- `src/pages/About.tsx` — wraps `SocialProofSection` (the about/team content) with Navbar + Footer
+### 1. Database migration — `waitlist_entries` table
+```sql
+CREATE TABLE public.waitlist_entries (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  email text NOT NULL UNIQUE,
+  source text DEFAULT 'website',
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+ALTER TABLE public.waitlist_entries ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Anyone can join waitlist" ON public.waitlist_entries
+  FOR INSERT TO anon, authenticated WITH CHECK (true);
+```
+Public insert, no select/update/delete for anon users.
 
-Each page follows the same pattern: Navbar at top, section content with `pt-20` (for fixed navbar clearance), DualCTASection, Footer at bottom.
+### 2. New component — `WaitlistForm.tsx`
+A small inline form with:
+- Email input + submit button in a single row
+- Client-side validation (zod email schema)
+- Inserts into `waitlist_entries` via Supabase client
+- Success state: "You're on the list!" message
+- Duplicate handling: catches unique constraint error gracefully
+- Loading spinner on submit
 
-### 2. Update `src/App.tsx`
-Add routes:
-- `/students` → Students page
-- `/institutions` → Institutions page
-- `/ai-engine` → AIEngine page
-- `/about` → About page
+### 3. Update `DualCTASection.tsx`
+Replace the static "Join the Waitlist" button in the student card with the `WaitlistForm` component.
 
-### 3. Slim down `src/pages/Index.tsx`
-Remove `StudentsSection`, `InstitutionsSection`, `AIFeaturesSection`, `SocialProofSection`, and their `NarrativeBreak` wrappers. Keep: Hero, Problem, Flywheel, FAQ, DualCTA, Footer.
+### 4. Update `HeroSection.tsx`
+Replace the "Join the Waitlist" button with the `WaitlistForm` component styled for the hero layout.
 
-### 4. Update `Navbar.tsx`
-- Change `<a href="#students">` → React Router `<Link to="/students">` (and same for all 4 links)
-- Logo link → `<Link to="/">`
-- CTA links stay as anchor `#cta` or become `/` + scroll
-
-### 5. Update `Footer.tsx`
-- Same link changes: anchor `#students` → `<Link to="/students">`, etc.
-
-### Files touched
-- **New**: `src/pages/Students.tsx`, `src/pages/Institutions.tsx`, `src/pages/AIEngine.tsx`, `src/pages/About.tsx`
-- **Modified**: `src/App.tsx`, `src/pages/Index.tsx`, `src/components/landing/Navbar.tsx`, `src/components/landing/Footer.tsx`
+### Files
+- **New**: `src/components/landing/WaitlistForm.tsx`
+- **Migration**: new `waitlist_entries` table
+- **Modified**: `DualCTASection.tsx`, `HeroSection.tsx`
 
