@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, ChevronDown } from "lucide-react";
+import { Sparkles, ChevronDown, ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import WaitlistForm from "./WaitlistForm";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
