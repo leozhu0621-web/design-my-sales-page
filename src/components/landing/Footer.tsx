@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoDark from "@/assets/unipaith-logo-dark.svg";
 
 const Footer = () => (
   <footer className="bg-navy-500 text-fog-100 py-14 px-4 sm:px-6 lg:px-8">

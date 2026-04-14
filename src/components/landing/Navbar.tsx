@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoDark from "@/assets/unipaith-logo-dark.svg";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
