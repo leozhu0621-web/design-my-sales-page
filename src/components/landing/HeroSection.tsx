@@ -46,7 +46,7 @@ const HeroSection = () => (
     </div>
 
     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-gentle">
-      <a href="#problem" className="flex flex-col items-center gap-2 text-muted-foreground/60 hover:text-muted-foreground transition-colors">
+      <a href="#problem" className="flex flex-col items-center gap-2 text-muted-foreground/60 hover:text-muted-foreground transition-colors text-left">
         <span className="text-xs font-medium tracking-widest uppercase">Scroll to explore</span>
         <ChevronDown size={20} />
       </a>
