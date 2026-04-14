@@ -17,9 +17,6 @@ const HeroSection = () => (
         <span className="text-ocean-500">College Advisor</span>
       </h1>
 
-      <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: "200ms", animationFillMode: "both" }}>
-        Discover programs, get matched by AI, and apply to universities worldwide — all from one profile.
-      </p>
 
       <div className="animate-fade-in" style={{ animationDelay: "400ms", animationFillMode: "both" }}>
         <Button size="lg" className="h-14 rounded-2xl px-10 bg-accent hover:bg-gold-400 text-accent-foreground shadow-[0_0_24px_rgba(255,229,0,0.35)] text-base font-semibold" asChild>
