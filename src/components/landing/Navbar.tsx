@@ -24,7 +24,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-6">
             {links.map((l) => (
-              <Link key={l.to} to={l.to} className="story-link text-sm font-medium text-steel-400 hover:text-fog-100 transition-colors">
+              <Link key={l.to} to={l.to} className="story-link text-sm font-medium transition-colors text-primary-foreground text-center">
                 {l.label}
               </Link>
             ))}
