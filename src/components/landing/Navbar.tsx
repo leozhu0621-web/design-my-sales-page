@@ -28,7 +28,7 @@ const Navbar = () => {
                 {l.label}
               </Link>
             ))}
-            <Button variant="outline" size="sm" className="border-steel-500 text-fog-100 hover:bg-ocean-500 hover:text-white" asChild>
+            <Button variant="outline" size="sm" className="border-navy-400 bg-transparent text-fog-100 hover:bg-ocean-500 hover:text-white hover:border-ocean-500" asChild>
               <a href="https://app.unipaith.co/login">Request a Demo</a>
             </Button>
             <Button size="sm" className="bg-gold-500 text-[#0C1C35] hover:bg-gold-400 font-semibold shadow-[0_0_20px_rgba(255,229,0,0.4)]" asChild>
@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="flex flex-col gap-2 pt-2">
-            <Button variant="outline" size="sm" className="border-steel-500 text-fog-100 hover:bg-ocean-500" asChild>
+            <Button variant="outline" size="sm" className="border-navy-400 bg-transparent text-fog-100 hover:bg-ocean-500 hover:border-ocean-500" asChild>
               <a href="https://app.unipaith.co/login">Request a Demo</a>
             </Button>
             <Button size="sm" className="bg-gold-500 text-[#0C1C35] hover:bg-gold-400 font-semibold shadow-[0_0_20px_rgba(255,229,0,0.4)]" asChild>
