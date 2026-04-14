@@ -1,19 +1,17 @@
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
-import ProblemSection from "@/components/landing/ProblemSection";
-import FlywheelSection from "@/components/landing/FlywheelSection";
-import FAQSection from "@/components/landing/FAQSection";
-import DualCTASection from "@/components/landing/DualCTASection";
+import WowMomentsSection from "@/components/landing/WowMomentsSection";
+import AudienceForkSection from "@/components/landing/AudienceForkSection";
+import WaitlistCTASection from "@/components/landing/WaitlistCTASection";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => (
   <div className="min-h-screen">
     <Navbar />
     <HeroSection />
-    <ProblemSection />
-    <FlywheelSection />
-    <FAQSection />
-    <DualCTASection />
+    <WowMomentsSection />
+    <AudienceForkSection />
+    <WaitlistCTASection />
     <Footer />
   </div>
 );
