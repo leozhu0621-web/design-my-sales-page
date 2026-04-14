@@ -3,15 +3,15 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+  <section className="relative min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16 overflow-hidden">
     {/* Ambient background */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute top-20 left-[10%] w-72 h-72 bg-ocean-500/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-steel-400/20 rounded-full blur-3xl animate-float-slow" />
     </div>
 
-    <div className="max-w-5xl mx-auto text-center">
-      <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.08] mb-6 tracking-tight font-heading animate-fade-in">
+    <div className="max-w-5xl mx-auto text-center w-full">
+      <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.02] mb-6 tracking-tight font-heading animate-fade-in">
         Everyone's Private
         <br />
         <span className="text-ocean-500">College Advisor</span>
@@ -30,7 +30,6 @@ const HeroSection = () => (
         </Button>
       </div>
 
-      {/* Product mockup */}
       <ScrollReveal delay={200} variant="scale-up">
         <div className="mt-16 mx-auto max-w-4xl">
           <div className="rounded-2xl border bg-card shadow-2xl overflow-hidden">
