@@ -11,34 +11,29 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-5xl mx-auto text-center">
-      <ScrollReveal delay={200} variant="scale-up">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.08] mb-6 tracking-tight font-heading">
-          Everyone's Private
-          <br />
-          <span className="text-ocean-500">College Advisor</span>
-        </h1>
-      </ScrollReveal>
+      <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.08] mb-6 tracking-tight font-heading animate-fade-in">
+        Everyone's Private
+        <br />
+        <span className="text-ocean-500">College Advisor</span>
+      </h1>
 
-      <ScrollReveal delay={400}>
-        <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-          Discover programs, get matched by AI, and apply to universities worldwide — all from one profile.
-        </p>
-      </ScrollReveal>
+      <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: "200ms", animationFillMode: "both" }}>
+        Discover programs, get matched by AI, and apply to universities worldwide — all from one profile.
+      </p>
 
-      <ScrollReveal delay={600}>
+      <div className="animate-fade-in" style={{ animationDelay: "400ms", animationFillMode: "both" }}>
         <Button size="lg" className="h-14 rounded-2xl px-10 bg-accent hover:bg-gold-400 text-accent-foreground shadow-[0_0_24px_rgba(255,229,0,0.35)] text-base font-semibold" asChild>
           <a href="https://app.unipaith.co/login">
             Join the Waitlist
             <ArrowRight size={18} className="ml-2" />
           </a>
         </Button>
-      </ScrollReveal>
+      </div>
 
       {/* Product mockup */}
-      <ScrollReveal delay={800} variant="scale-up">
+      <ScrollReveal delay={200} variant="scale-up">
         <div className="mt-16 mx-auto max-w-4xl">
           <div className="rounded-2xl border bg-card shadow-2xl overflow-hidden">
-            {/* Browser chrome */}
             <div className="flex items-center gap-2 px-4 py-3 border-b bg-muted/50">
               <div className="flex gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-destructive/60" />
@@ -47,7 +42,6 @@ const HeroSection = () => (
               </div>
               <div className="flex-1 text-center text-xs text-muted-foreground">app.unipaith.co</div>
             </div>
-            {/* Dashboard mockup */}
             <div className="p-6 sm:p-8 space-y-6">
               <div className="flex items-center justify-between">
                 <div>
