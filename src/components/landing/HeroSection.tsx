@@ -21,9 +21,9 @@ const HeroSection = () => (
 
       <ScrollReveal delay={200} variant="scale-up">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight font-heading">
-          Apply once.{" "}
+          Your Private{" "}
           <br className="hidden sm:block" />
-          <span className="text-ocean-500">Go anywhere.</span>
+          <span className="text-ocean-500">College Advisor</span>
         </h1>
       </ScrollReveal>
 
