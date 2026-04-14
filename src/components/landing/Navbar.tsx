@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoDark from "@/assets/unipaith-logo-dark.svg";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,9 +18,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-500/95 backdrop-blur-md border-b border-navy-400/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl hover:scale-105 transition-transform">
-            <span className="font-normal text-steel-400">Uni</span>
-            <span className="font-extrabold text-fog-100">Paith</span>
+          <Link to="/" className="hover:scale-105 transition-transform">
+            <img src={logoDark} alt="UniPaith" className="h-8" />
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
