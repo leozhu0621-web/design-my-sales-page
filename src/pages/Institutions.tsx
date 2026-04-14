@@ -1,15 +1,17 @@
 import Navbar from "@/components/landing/Navbar";
-import InstitutionsSection from "@/components/landing/InstitutionsSection";
-import DualCTASection from "@/components/landing/DualCTASection";
+import InstitutionHero from "@/components/landing/InstitutionHero";
+import InstitutionWalkthroughSection from "@/components/landing/InstitutionWalkthroughSection";
+import InstitutionFAQSection from "@/components/landing/InstitutionFAQSection";
+import InstitutionCTASection from "@/components/landing/InstitutionCTASection";
 import Footer from "@/components/landing/Footer";
 
 const Institutions = () => (
   <div className="min-h-screen">
     <Navbar />
-    <div className="pt-16">
-      <InstitutionsSection />
-      <DualCTASection />
-    </div>
+    <InstitutionHero />
+    <InstitutionWalkthroughSection />
+    <InstitutionFAQSection />
+    <InstitutionCTASection />
     <Footer />
   </div>
 );
