@@ -1,4 +1,5 @@
 import { Users, TrendingUp, Award } from "lucide-react";
+import logoDark from "@/assets/unipaith-logo-dark.svg";
 import ScrollReveal from "./ScrollReveal";
 
 const nodes = [
@@ -22,8 +23,8 @@ const FlywheelSection = () => (
           <div className="absolute inset-0 rounded-full border-2 border-dashed border-fog-100/20 animate-orbit" style={{ animationDuration: "30s" }} />
           
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-ocean-500/20 flex items-center justify-center">
-              <span className="text-sm sm:text-base font-bold text-fog-100 font-heading">UniPaith</span>
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-ocean-500/20 flex items-center justify-center p-4">
+              <img src={logoDark} alt="UniPaith" className="h-5 sm:h-6" />
             </div>
           </div>
 
