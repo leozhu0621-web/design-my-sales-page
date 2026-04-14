@@ -12,12 +12,6 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-5xl mx-auto text-center">
-      <ScrollReveal variant="blur-in">
-        <div className="inline-flex items-center gap-2 bg-ocean-500/10 text-ocean-500 rounded-full px-5 py-2 text-sm font-medium mb-8">
-          <Sparkles size={16} />
-          AI-Powered Admissions Platform
-        </div>
-      </ScrollReveal>
 
       <ScrollReveal delay={200} variant="scale-up">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight font-heading">
